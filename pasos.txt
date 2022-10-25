@@ -1,0 +1,29 @@
+0. Entender el problema y hacer un plantemamiento
+1. Generar un github
+2. Crear los pkls del modelo
+3. Generar un API
+4. Revisarlo en postman
+5. Generar el documento del api
+6. Guardarlo en un docker
+7. Front end con streamlit
+8. Ver si puedo hacerlo online también
+
+inputs[numeric_cols] = scaler.transform(inputs[numeric_cols])
+
+scaler -> numeric_cols
+
+encoder = OneHotEncoder(sparse=False, handle_unknown='ignore').fit(inputs[categorical_cols])
+encoded_cols = list(encoder.get_feature_names_out(categorical_cols))
+
+inputs[encoded_cols] = encoder.transform(inputs[categorical_cols])
+encoder
+
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import OneHotEncoder
+
+
+max_distance
+
+numpy pandas
+xgboost
+scikit-learn 
