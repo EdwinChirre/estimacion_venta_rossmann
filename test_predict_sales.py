@@ -61,13 +61,16 @@ def predict(input_values: List[Union[int, float,str]]):
     
     var_final = ['Store', 'Promo', 'SchoolHoliday', 'CompetitionDistance',
        'CompetitionOpen', 'Promo2', 'Promo2Open', 'IsPromo2Month', 'Day',
-       'Month', 'Year', 'WeekOfYear', 'DayOfWeek_1.0', 'DayOfWeek_2.0',
-       'DayOfWeek_3.0', 'DayOfWeek_4.0', 'DayOfWeek_5.0', 'DayOfWeek_6.0',
-       'DayOfWeek_7.0', 'StateHoliday_0', 'StateHoliday_a', 'StateHoliday_b',
+       'Month', 'Year', 'WeekOfYear', 'DayOfWeek_1', 'DayOfWeek_2',
+       'DayOfWeek_3', 'DayOfWeek_4', 'DayOfWeek_5', 'DayOfWeek_6',
+       'DayOfWeek_7', 'StateHoliday_0', 'StateHoliday_a', 'StateHoliday_b',
        'StateHoliday_c', 'StoreType_a', 'StoreType_b', 'StoreType_c',
        'StoreType_d', 'Assortment_a', 'Assortment_b', 'Assortment_c']
     
     preds = model_sales.predict(features_df[var_final])
+    
+    #preds = np.round(preds,2)
+    
     print('La venta estimada es: ', preds)
     #print(features_df.columns)
     # print(features_df['DayOfWeek'])
