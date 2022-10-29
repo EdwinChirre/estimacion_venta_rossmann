@@ -10,7 +10,7 @@ from typing import List, Union
 
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import OneHotEncoder
-
+import uvicorn
 
 app = FastAPI()
 
@@ -116,3 +116,7 @@ async def generate_sales_estimate(input: Input):
     
     
     return  Output(Store =input.Store, Sales = preds)
+
+
+if __name__ == '__main__':
+    uvicorn.run(app,host="0.0.0.0", port = 3000,debug =True)
