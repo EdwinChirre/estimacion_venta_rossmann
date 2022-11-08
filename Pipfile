@@ -6,11 +6,12 @@ name = "pypi"
 [packages]
 pandas = "*"
 numpy = "*"
-xgboost = "*"
+xgboost = "==1.6.2"
 uvicorn = "*"
-scikit-learn = "*"
+scikit-learn = "==1.0.2"
 fastapi = "*"
 pydantic = "*"
+streamlit = "*"
 
 [dev-packages]
 
